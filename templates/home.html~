@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<h1>{{ greeting }}</h1>
+
+<ul>{% for object in graph %}
+<a href="{{ object.get_absolute_url }}">{{ object }}</a>
+{% endfor %}</ul>
+
+<ul>{% for object in towns %}
+<li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+{% endfor %}</ul>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+from django.shortcuts import render_to_response
+from pullover.information.models import Food
+from pullover.information.models import Entertainment
+from pullover.information.models import History
+
+def detail(request, locater_id)
+    ent = Entertainment.objects.get(id=information_id)
+    return render_to_response('detail.html', {
+        'ent': ent,
+    })

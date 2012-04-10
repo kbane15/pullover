@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{{ town }}
+
+<ul>{% for object in ent %}
+<li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+{% endfor %}</ul>
+
+{% endblock %}

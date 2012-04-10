@@ -1,0 +1,11 @@
+from information.models import Food
+from information.models import Entertainment
+from information.models import History
+from information.models import Foodtwo
+from information.models import Entertainmenttwo
+from django.contrib import admin
+
+admin.site.register(Food)
+admin.site.register(Entertainment)
+admin.site.register(History)
+
