@@ -2,9 +2,17 @@
 
 {% block main %}
 
-{{ town }}
+<h1>{{ town }}</h1>
+
+<h2>{{ entsub }}</h2>
 
 <ul>{% for object in ent %}
+<li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+{% endfor %}</ul>
+
+<h2>{{ foodsub }}</h2>
+
+<ul>{% for object in food %}
 <li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
 {% endfor %}</ul>
 

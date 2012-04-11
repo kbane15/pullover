@@ -8,6 +8,8 @@ class Food(models.Model):
     photograph = models.ImageField(upload_to="static/foodphotos/")
     town = models.ForeignKey(Town)
     pub_date = models.DateTimeField('date published')
+    def get_absolute_url(self):
+        return "/town/%i/" % self.id
     def __unicode__(self):
         return self.name
 
@@ -26,5 +28,7 @@ class History(models.Model):
     about = models.TextField()
     town = models.ForeignKey(Town)
     pub_date = models.DateTimeField('date published')
+    def get_absolute_url(self):
+        return "/town/%i/" % self.id
     def __unicode__(self):
-        return self.history
+        return self.name
