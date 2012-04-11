@@ -9,7 +9,7 @@ class Food(models.Model):
     town = models.ForeignKey(Town)
     pub_date = models.DateTimeField('date published')
     def get_absolute_url(self):
-        return "/town/%i/" % self.id
+        return "/food/%i/" % self.id
     def __unicode__(self):
         return self.name
 
@@ -20,7 +20,7 @@ class Entertainment(models.Model):
     town = models.ForeignKey(Town)
     pub_date = models.DateTimeField('date published')
     def get_absolute_url(self):
-        return "/town/%i/" % self.id
+        return "/ent/%i/" % self.id
     def __unicode__(self):
         return self.name
 

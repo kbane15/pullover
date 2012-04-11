@@ -31,4 +31,4 @@ class History(models.Model):
     def get_absolute_url(self):
         return "/town/%i/" % self.id
     def __unicode__(self):
-        return self.name
+        return self.about

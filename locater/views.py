@@ -17,6 +17,7 @@ def home(request):
 
 def detail(request, town_id):
     town = Town.objects.get(id=town_id)
+    # area = Town.objects.filter(town=town)
     entsub = "Entertainment"
     ent = Entertainment.objects.filter(town=town)
     foodsub = "Food"
@@ -25,6 +26,7 @@ def detail(request, town_id):
     history = History.objects.filter(town=town)
     return render_to_response('detail.html', {
         'town': town,
+        # 'area': area,
         'ent': ent,
         'food': food,
         'history': history,

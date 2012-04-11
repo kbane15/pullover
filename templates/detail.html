@@ -7,15 +7,19 @@
 <h2>{{ entsub }}</h2>
 
 <ul>{% for object in ent %}
-<li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+<P><strong><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></strong></P> <P>{{ object.about }}</P>
 {% endfor %}</ul>
 
 <h2>{{ foodsub }}</h2>
 
 <ul>{% for object in food %}
-<li><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+<P><strong><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></strong></P> <P>{{ object.about }}</P>
 {% endfor %}</ul>
 
 <h2>{{ historysub }}</h2>
+
+<ul>{% for object in history %}
+<P>{{ object.about }}</P>
+{% endfor %}</ul>
 
 {% endblock %}
